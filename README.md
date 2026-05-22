@@ -1,19 +1,21 @@
-# 🎈 Blank app template
+# Dashboard Realisasi Anggaran
 
-A simple Streamlit app template for you to modify!
+Dashboard ini menampilkan visualisasi data realisasi anggaran dan hasil prediksi model untuk memperkirakan apakah realisasi anggaran akan mencapai 95%.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Cara menjalankan
 
-### How to run it on your own machine
-
-1. Install the requirements
-
+1. Install dependensi:
+   ```bash
+   pip install -r requirements.txt
    ```
-   $ pip install -r requirements.txt
+2. Jalankan Streamlit:
+   ```bash
+   streamlit run streamlit_app.py
    ```
 
-2. Run the app
+## Struktur proyek
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+- `data/02_realisasi_anggaran_klasifikasi.csv` — dataset realisasi anggaran.
+- `model/Best_model.pkcls` — model Orange Logistic Regression untuk prediksi `realisasi_tercapai_95persen`.
+- `streamlit_app.py` — aplikasi dashboard Streamlit.
+- `requirements.txt` — paket Python yang dibutuhkan.
