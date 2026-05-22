@@ -117,8 +117,14 @@ def main():
         return
 
     st.markdown("### Visualisasi Utama")
+    status_counts = (
+        filtered["realisasi_tercapai_95persen"]
+        .value_counts()
+        .rename_axis("Status")
+        .reset_index(name="Jumlah")
+    )
     fig1 = px.bar(
-        filtered["realisasi_tercapai_95persen"].value_counts().reset_index().rename(columns={"index": "Status", "realisasi_tercapai_95persen": "Jumlah"}),
+        status_counts,
         x="Status",
         y="Jumlah",
         color="Status",
